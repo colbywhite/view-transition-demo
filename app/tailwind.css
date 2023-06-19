@@ -5,3 +5,7 @@
 .menu li > a + link {
   @apply hidden;
 }
+
+#active-marker {
+  view-transition-name: active-nav;
+}
