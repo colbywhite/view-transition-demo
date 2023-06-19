@@ -1,25 +1,15 @@
-import { NavLink, useLocation } from "@remix-run/react";
-
-function ActiveNavMarker() {
-  return (
-    <div
-      id="active-marker"
-      className="relative mt-1 h-[2px] w-full bg-primary p-0"
-    ></div>
-  );
-}
+import AnimatedNavLink from "~/components/AnimatedNavLink";
 
 const NAV_LINK_CLASSES = "w-fit flex justify-center";
 const ACTIVE_NAV_LINK_CLASSES = `${NAV_LINK_CLASSES} text-primary-focus`;
 
 export function Header() {
-  const { pathname } = useLocation();
   return (
     <header>
       <nav>
         <ul className="menu menu-horizontal w-full justify-center gap-2">
           <li className="">
-            <NavLink
+            <AnimatedNavLink
               to="/"
               prefetch="render"
               className={({ isActive }) =>
@@ -27,11 +17,10 @@ export function Header() {
               }
             >
               Home
-            </NavLink>
-            {pathname === "/" && <ActiveNavMarker />}
+            </AnimatedNavLink>
           </li>
           <li>
-            <NavLink
+            <AnimatedNavLink
               to="/about"
               prefetch="render"
               className={({ isActive }) =>
@@ -39,8 +28,7 @@ export function Header() {
               }
             >
               About
-            </NavLink>
-            {pathname === "/about" && <ActiveNavMarker />}
+            </AnimatedNavLink>
           </li>
         </ul>
       </nav>
