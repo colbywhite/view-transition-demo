@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .menu li > a + link {
-    @apply hidden
+  @apply hidden;
 }
