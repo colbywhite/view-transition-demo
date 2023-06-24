@@ -21,6 +21,8 @@
     "/public/build"
   ],
   "dependencies": {
+    "@netlify/functions": "^1.6.0",
+    "@remix-run/netlify": "^1.17.1",
     "@remix-run/node": "*",
     "@remix-run/react": "*",
     "@remix-run/serve": "*",
